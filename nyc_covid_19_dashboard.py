@@ -272,7 +272,7 @@ def update_graph(metric_selected, seven_day_metric_selected):
         fig.update_yaxes(hoverformat=",.0f", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False,type='linear')
 
     else:
-        fig.update_yaxes(title_text=dff_dict[metric_selected] + " v4", showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
+        fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
         fig.update_yaxes(hoverformat=",.0f", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)       
    
     # Change theme, remove grid, format hover labels, and center legend
