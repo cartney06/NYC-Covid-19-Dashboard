@@ -1,1 +1,1 @@
-web: gunicorn app:server
+web: gunicorn nyc_covid_19_dashboard:server
