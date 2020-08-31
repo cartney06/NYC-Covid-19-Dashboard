@@ -277,7 +277,7 @@ def update_graph(metric_selected, seven_day_metric_selected):
    
     # Change theme, remove grid, format hover labels, and center legend
     fig.update_layout(hovermode='x unified', hoverlabel=dict(namelength=60), xaxis=dict(visible=True, zeroline=False), yaxis=dict(showgrid=False), autosize=True, template='plotly_dark', legend=dict(yanchor='bottom',x=0.5, xanchor='center', orientation="h", y=1.02))
-    fig.update_layout(paper_bgcolor="#21252C", plot_bgcolor="#21252C")
+    fig.update_layout(height=720, paper_bgcolor="#21252C", plot_bgcolor="#21252C")
 
     return fig
 # ----------------------------------------------------------------------------------------------------------------------------------------
