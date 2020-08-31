@@ -145,8 +145,10 @@ def generate_table(dataframe, max_rows=2):
     ])
 
 ##### App Layout
-server = app.server
 app = dash.Dash(__name__, title='NYC COVID-19 Dashboard')
+
+server = app.server
+
 app.layout = html.Div(children=[
     html.Div(children=[
     html.H1("Time Series and Demographic Analysis of COVID-19 in New York City", style={"text-align":"center", 'color':colors['text']}),
