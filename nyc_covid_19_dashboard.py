@@ -145,6 +145,7 @@ def generate_table(dataframe, max_rows=2):
     ])
 
 ##### App Layout
+server = app.server
 app = dash.Dash(__name__, title='NYC COVID-19 Dashboard')
 app.layout = html.Div(children=[
     html.Div(children=[
