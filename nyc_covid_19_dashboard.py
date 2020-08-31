@@ -259,18 +259,21 @@ def update_graph(metric_selected, seven_day_metric_selected):
     fig.update_xaxes(title_text="Date", showline=False)
 
     # Set y-axes titles and hoverformat
-    if metric_selected != 'pct_tested_positive' and seven_day_metric_selected == 'pct_tested_positive':
-        fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
+    if metric_selected != 'pct_tested_positive' and seven_day_metric_selected == '7-day_rolling_avg_pct_tested_positive':
+        fig.update_yaxes(hoverformat=",.0f", title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
         fig.update_yaxes(hoverformat=",.2%", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)
+    
+    elif metric_selected == 'pct_tested_positive' and seven_day_metric_selected == '7-day_rolling_avg_pct_tested_positive': 
+        fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, tickformat=',.2%')
+        fig.update_yaxes(hoverformat=",.2%", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)
+
     elif metric_selected == 'pct_tested_positive' and seven_day_metric_selected != 'pct_tested_positive': 
         fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, tickformat=',.2%')
-        fig.update_yaxes(hoverformat=",", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)
-    elif metric_selected == 'pct_tested_positive' and seven_day_metric_selected == 'pct_tested_positive': 
-        fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, tickformat=',.2%')
-        fig.update_yaxes(hoverformat=",.2%", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)
+        fig.update_yaxes(hoverformat=",.0f", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False,type='linear')
+
     else:
-        fig.update_yaxes(title_text=dff_dict[metric_selected], showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
-        fig.update_yaxes(hoverformat=",", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)       
+        fig.update_yaxes(title_text=dff_dict[metric_selected] + " v4", showgrid=False, secondary_y=False, showticklabels=True, type='linear', tickformat=',')
+        fig.update_yaxes(hoverformat=",.0f", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)       
    
     # Change theme, remove grid, format hover labels, and center legend
     fig.update_layout(hovermode='x unified', hoverlabel=dict(namelength=35), xaxis=dict(visible=True, zeroline=False), yaxis=dict(showgrid=False), autosize=True, template='plotly_dark', legend=dict(yanchor='bottom',x=0.5, xanchor='center', orientation="h", y=1.02))
