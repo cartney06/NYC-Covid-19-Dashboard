@@ -276,7 +276,7 @@ def update_graph(metric_selected, seven_day_metric_selected):
         fig.update_yaxes(hoverformat=",.0f", showgrid=False, secondary_y=True, showticklabels=False, zeroline=False)       
    
     # Change theme, remove grid, format hover labels, and center legend
-    fig.update_layout(hovermode='x unified', hoverlabel=dict(namelength=35), xaxis=dict(visible=True, zeroline=False), yaxis=dict(showgrid=False), autosize=True, template='plotly_dark', legend=dict(yanchor='bottom',x=0.5, xanchor='center', orientation="h", y=1.02))
+    fig.update_layout(hovermode='x unified', hoverlabel=dict(namelength=55), xaxis=dict(visible=True, zeroline=False), yaxis=dict(showgrid=False), autosize=True, template='plotly_dark', legend=dict(yanchor='bottom',x=0.5, xanchor='center', orientation="h", y=1.02))
     fig.update_layout(paper_bgcolor="#21252C", plot_bgcolor="#21252C")
 
     return fig
