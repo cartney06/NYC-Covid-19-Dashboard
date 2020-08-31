@@ -5,7 +5,7 @@ This dashboard continually queries publically available data provided by the New
 
 ## Screenshots
 ---
-![Image of NYC Covid Dashboard](images/NYC_COVID_19_Dashboard_Screenshot.PNG)
+![Image of NYC Covid Dashboard](images/NYC_COVID_19_Dashboard_Screenshot.png)
 ---
 ## Tools
 Python 3
