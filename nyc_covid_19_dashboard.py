@@ -151,7 +151,7 @@ server = app.server
 
 app.layout = html.Div(children=[
     html.Div(children=[
-    html.H1("Time Series and Demographic Analysis of COVID-19 in New York City", style={"text-align":"center", 'color':colors['text']}),
+    html.H1("Time Series Chart of COVID-19 in New York City", style={"text-align":"center", 'color':colors['text']}),
     html.H2("Reporting Dashboard", style={"text-align":"center", 'color':colors['text']}),
     html.Hr(),
     html.H3("New York City Totals", style={"text-align":"center", 'color':colors['text']}),
