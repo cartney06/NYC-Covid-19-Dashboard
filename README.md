@@ -15,7 +15,7 @@ Python 3
 - Plotly
 - Dash
 
-HTML
-
-CSS
+HTML<br>
+CSS<br>
+Heroku (for hosting the app)
 
