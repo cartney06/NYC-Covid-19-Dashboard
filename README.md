@@ -3,6 +3,8 @@ This is a dashboard higlighting trends in COVID-19 cases in NYC. The dashboard i
 
 This dashboard continually queries publically available data provided by the New York City Department of Health.
 
+The live dashboard can be found [here](http://nyc-covid-19-dashboard.cartneythompson.com/)
+
 ## Screenshots
 ---
 ![Image of NYC Covid Dashboard](images/NYC_COVID_19_Dashboard_Screenshot.png)
@@ -14,5 +16,6 @@ Python 3
 - Dash
 
 HTML
+
 CSS
 
